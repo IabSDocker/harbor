@@ -46,6 +46,6 @@ jobs:
           # Trigger the check-harbor-releases.yml workflow
           curl -X POST \
             -H "Authorization: token ${{ secrets.TOKEN }}" \
-            -d '{"ref": "main"}' \
+            -d '{"ref": "test"}' \
             https://api.github.com/repos/${{ github.repository }}/actions/workflows/check-harbor-releases.yml/dispatches
         fi
